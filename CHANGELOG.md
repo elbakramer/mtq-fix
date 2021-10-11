@@ -1,3 +1,7 @@
+#### v0.1.4 (2021-10-12)
+
+Fixed some tooltips not showing correctly.
+
 #### v0.1.3 (2021-10-11)
 
 Added category and tooltips in ModMenu integration.

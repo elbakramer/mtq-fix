@@ -95,8 +95,12 @@ publishing {
 
 def curseforgeProps = new Properties()
 
-file("curseforge.properties").withInputStream {
-	stream -> curseforgeProps.load(stream)
+file("curseforge.properties").with { it ->
+	if (it.exists()) {
+		it.withInputStream { stream ->
+			curseforgeProps.load(stream)
+		}
+	}
 }
 
 curseforge {
@@ -114,6 +118,8 @@ curseforge {
 
 		relations {
 			requiredLibrary 'fabric-api'
+			requiredLibrary 'cloth-config'
+			requiredLibrary 'modmenu'
 		}
 
 		mainArtifact(remapJar) {

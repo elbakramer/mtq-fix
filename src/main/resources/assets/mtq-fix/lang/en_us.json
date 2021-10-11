@@ -20,6 +20,6 @@
     "text.autoconfig.mtq-fix.option.logOnBypassVehicleMovedTooQuicklyTest.@Tooltip": "Print log when bypassing wehicle moved too quickly test",
     "text.autoconfig.mtq-fix.option.logOnBypassVehicleMovedWronglyTest.@Tooltip": "Print log when bypassing vehicle moved wrongly test",
     "text.autoconfig.mtq-fix.option.logOnBypassVehiclePositionRevertingLogic.@Tooltip": "Print log when bypassing position reverting logic",
-    "text.autoconfig.mtq-fix.option.logOnBypassPlayerMovedTooQuicklyTes.@Tooltipt": "Print log when bypassing player moved too quickly test",
+    "text.autoconfig.mtq-fix.option.logOnBypassPlayerMovedTooQuicklyTest.@Tooltip": "Print log when bypassing player moved too quickly test",
     "text.autoconfig.mtq-fix.option.logOnBypassPlayerMovedWronglyTest.@Tooltip": "Print log when bypassing player moved wrongly test"
 }
