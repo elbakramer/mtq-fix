@@ -1,3 +1,7 @@
+#### v0.1.6 (2021-10-12)
+
+Changed to the first main release from alpha state.
+
 #### v0.1.5 (2021-10-12)
 
 Changed homepage link to CurseForge.

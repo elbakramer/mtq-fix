@@ -104,10 +104,10 @@ file("curseforge.properties").with { it ->
 }
 
 curseforge {
-	apiKey = curseforgeProps.get('apiKey')
+	apiKey = curseforgeProps.getProperty('apiKey', '')
 	project {
 		id = '535845'
-		releaseType = 'alpha'
+		releaseType = 'release'
 
 		changelogType = 'markdown'
 		changelog = file('CHANGELOG.md')
