@@ -1,3 +1,7 @@
+#### v0.1.5 (2021-10-12)
+
+Changed homepage link to CurseForge.
+
 #### v0.1.4 (2021-10-12)
 
 Fixed some tooltips not showing correctly.
