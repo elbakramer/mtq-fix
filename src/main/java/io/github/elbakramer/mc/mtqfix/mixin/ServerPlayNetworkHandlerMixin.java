@@ -50,10 +50,9 @@ public class ServerPlayNetworkHandlerMixin {
 
 	@ModifyVariable(method = "onVehicleMove", index = 28, at = @At(value = "STORE"), slice = @Slice(from = @At(value = "INVOKE", target = "Lnet/minecraft/entity/Entity;getVelocity()Lnet/minecraft/util/math/Vec3d;", ordinal = 0), to = @At(value = "INVOKE", target = "Lnet/minecraft/entity/Entity;move(Lnet/minecraft/entity/MovementType;Lnet/minecraft/util/math/Vec3d;)V", ordinal = 0)), print = print)
 	private boolean bypassRevertingPositionOnVehicleMovedWrongly(boolean startingBoundingSpaceNonEmpty) {
-		if (config.bypassRevertingPositionOnVehicleMovedWrongly) {
+		if (config.bypassVehiclePositionRevertingLogic) {
 			boolean overridingValue = false;
-			if (config.logOnBypassRevertingPositionOnVehicleMovedWrongly
-					&& startingBoundingSpaceNonEmpty != overridingValue) {
+			if (config.logOnBypassVehiclePositionRevertingLogic && startingBoundingSpaceNonEmpty != overridingValue) {
 				MOD_LOGGER.info("[MtqFix] Bypassing RevertingPositionOnVehicleMovedWrongly Logic (overriding {} to {})",
 						startingBoundingSpaceNonEmpty, overridingValue);
 			}

@@ -2,20 +2,49 @@ package io.github.elbakramer.mc.mtqfix.util;
 
 import me.shedaniel.autoconfig.ConfigData;
 import me.shedaniel.autoconfig.annotation.Config;
+import me.shedaniel.autoconfig.annotation.ConfigEntry;
 
 @Config(name = "mtq-fix")
 public class MtqFixModConfig implements ConfigData {
 
+    @ConfigEntry.Category("vehicle")
+    @ConfigEntry.Gui.Tooltip
     public boolean bypassVehicleMovedTooQuicklyTest = true;
+
+    @ConfigEntry.Category("vehicle")
+    @ConfigEntry.Gui.Tooltip
     public boolean bypassVehicleMovedWronglyTest = true;
-    public boolean bypassRevertingPositionOnVehicleMovedWrongly = true;
+
+    @ConfigEntry.Category("vehicle")
+    @ConfigEntry.Gui.Tooltip
+    public boolean bypassVehiclePositionRevertingLogic = true;
+
+    @ConfigEntry.Category("vehicle")
+    @ConfigEntry.Gui.Tooltip
+    public boolean logOnBypassVehicleMovedTooQuicklyTest = false;
+
+    @ConfigEntry.Category("vehicle")
+    @ConfigEntry.Gui.Tooltip
+    public boolean logOnBypassVehicleMovedWronglyTest = false;
+
+    @ConfigEntry.Category("vehicle")
+    @ConfigEntry.Gui.Tooltip
+    public boolean logOnBypassVehiclePositionRevertingLogic = false;
+
+    @ConfigEntry.Category("player")
+    @ConfigEntry.Gui.Tooltip
     public boolean bypassPlayerMovedTooQuicklyTest = true;
+
+    @ConfigEntry.Category("player")
+    @ConfigEntry.Gui.Tooltip
     public boolean bypassPlayerMovedWronglyTest = true;
 
-    public boolean logOnBypassVehicleMovedTooQuicklyTest = false;
-    public boolean logOnBypassVehicleMovedWronglyTest = false;
-    public boolean logOnBypassRevertingPositionOnVehicleMovedWrongly = false;
+    @ConfigEntry.Category("player")
+    @ConfigEntry.Gui.Tooltip
     public boolean logOnBypassPlayerMovedTooQuicklyTest = false;
+
+    @ConfigEntry.Category("player")
+    @ConfigEntry.Gui.Tooltip
     public boolean logOnBypassPlayerMovedWronglyTest = false;
 
 }

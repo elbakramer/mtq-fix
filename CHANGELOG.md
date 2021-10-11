@@ -1,3 +1,6 @@
+#### v0.1.3 (2021-10-11)
+
+Added category and tooltips in ModMenu integration.
 #### v0.1.2 (2021-10-11)
 
 Added logging support with some fixes.
