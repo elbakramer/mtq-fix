@@ -1,31 +1,31 @@
 {
   "schemaVersion": 1,
-  "id": "modid",
-  "version": "${version}",
-
-  "name": "Example Mod",
-  "description": "This is an example description! Tell everyone what your mod is about!",
+  "id": "mtq-fix",
+  "version": "0.1.2",
+  "name": "MTQ Fix",
+  "description": "Removes moved too quickly test and others.",
   "authors": [
-    "Me!"
+    "Yunseong Hwang"
   ],
   "contact": {
-    "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "homepage": "https://github.com/elbakramer/mtq-fix",
+    "issues": "https://github.com/elbakramer/mtq-fix/issues",
+    "sources": "https://github.com/elbakramer/mtq-fix"
   },
-
-  "license": "CC0-1.0",
-  "icon": "assets/modid/icon.png",
-
+  "license": "MIT",
+  "icon": "assets/mtq-fix/icon.png",
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.fabricmc.example.ExampleMod"
+      "io.github.elbakramer.mc.mtqfix.MtqFixMod"
+    ],
+    "modmenu": [
+      "io.github.elbakramer.mc.mtqfix.util.MtqFixModMenuIntegration"
     ]
   },
   "mixins": [
-    "modid.mixins.json"
+    "mtq-fix.mixins.json"
   ],
-
   "depends": {
     "fabricloader": ">=0.11.3",
     "fabric": "*",

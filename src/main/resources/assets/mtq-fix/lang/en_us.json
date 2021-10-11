@@ -1,0 +1,13 @@
+{
+    "text.autoconfig.mtq-fix.title": "MTQ Fix Config",
+    "text.autoconfig.mtq-fix.option.bypassVehicleMovedTooQuicklyTest": "Bypass Vehicle Moved Too Quickly Test",
+    "text.autoconfig.mtq-fix.option.bypassVehicleMovedWronglyTest": "Bypass Vehicle Moved Wrongly Test",
+    "text.autoconfig.mtq-fix.option.bypassRevertingPositionOnVehicleMovedWrongly": "Bypass Reverting Position on Vehicle Moved Wrongly",
+    "text.autoconfig.mtq-fix.option.bypassPlayerMovedTooQuicklyTest": "Bypass Player Moved Too Quickly Test",
+    "text.autoconfig.mtq-fix.option.bypassPlayerMovedWronglyTest": "Bypass Player Moved Wrongly Test",
+    "text.autoconfig.mtq-fix.option.logOnBypassVehicleMovedTooQuicklyTest": "Print Log on Bypass Vehicle Moved Too Quickly Test",
+    "text.autoconfig.mtq-fix.option.logOnBypassVehicleMovedWronglyTest": "Print Log on Bypass Vehicle Moved Wrongly Test",
+    "text.autoconfig.mtq-fix.option.logOnBypassRevertingPositionOnVehicleMovedWrongly": "Print Log on Bypass Reverting Position on Vehicle Moved Wrongly",
+    "text.autoconfig.mtq-fix.option.logOnBypassPlayerMovedTooQuicklyTest": "Print Log on Bypass Player Moved Too Quickly Test",
+    "text.autoconfig.mtq-fix.option.logOnBypassPlayerMovedWronglyTest": "Print Log on Bypass Player Moved Wrongly Test"
+}
