@@ -1,3 +1,6 @@
+#### v0.2.0 (2021-10-14)
+
+More precise condition for checking whether the value overriding for bypass is really needed.
 #### v0.1.7 (2021-10-12)
 
 Fix NoSuchField error for config.
