@@ -7,7 +7,7 @@ public class MtqFixModMenuIntegration implements ModMenuApi {
 
     @Override
     public ConfigScreenFactory<?> getModConfigScreenFactory() {
-        return parent -> MtqFixModConfig.getConfigScreen(parent).get();
+        return parent -> MtqFixModConfigManager.getConfigScreen(parent).get();
     }
 
 }
