@@ -4,7 +4,6 @@ import org.apache.logging.log4j.Logger;
 
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
-import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.ModifyVariable;
 import org.spongepowered.asm.mixin.injection.Slice;
@@ -21,12 +20,6 @@ import io.github.elbakramer.mc.mtqfix.util.MtqFixModConfig;
 
 @Mixin(ServerPlayNetworkHandler.class)
 public abstract class ServerPlayNetworkHandlerMixin {
-
-	@Unique
-	private static final Logger LOGGER = MtqFixMod.LOGGER;
-
-	@Unique
-	private MtqFixModConfig config = MtqFixModConfig.getConfig();
 
 	@Shadow
 	private ServerPlayerEntity player;
@@ -48,6 +41,8 @@ public abstract class ServerPlayNetworkHandlerMixin {
 
 	@ModifyVariable(method = "onVehicleMove", index = 26, at = @At(value = "STORE"), slice = @Slice(from = @At(value = "INVOKE", target = "Lnet/minecraft/entity/Entity;getVelocity()Lnet/minecraft/util/math/Vec3d;", ordinal = 0), to = @At(value = "INVOKE", target = "Lnet/minecraft/server/world/ServerWorld;isSpaceEmpty(Lnet/minecraft/entity/Entity;Lnet/minecraft/util/math/Box;)Z", ordinal = 0)))
 	private double bypassVehicleMovedTooQuicklyTest(double aboutToMoveLengthSquared) {
+		Logger LOGGER = MtqFixMod.LOGGER;
+		MtqFixModConfig config = MtqFixModConfig.getConfig();
 		if (config.bypassVehicleMovedTooQuicklyTest) {
 			double overridingValue = aboutToMoveLengthSquared;
 			if (config.reproduceOnBypassVehicleMovedTooQuicklyTest) {
@@ -74,6 +69,8 @@ public abstract class ServerPlayNetworkHandlerMixin {
 
 	@ModifyVariable(method = "onVehicleMove", index = 26, at = @At(value = "STORE"), slice = @Slice(from = @At(value = "INVOKE", target = "Lnet/minecraft/entity/Entity;move(Lnet/minecraft/entity/MovementType;Lnet/minecraft/util/math/Vec3d;)V", ordinal = 0), to = @At(value = "INVOKE", target = "Lnet/minecraft/entity/Entity;updatePositionAndAngles(DDDFF)V", ordinal = 0)))
 	private double bypassVehicleMovedWronglyTest(double distanceFromTargetSquared) {
+		Logger LOGGER = MtqFixMod.LOGGER;
+		MtqFixModConfig config = MtqFixModConfig.getConfig();
 		if (config.bypassVehicleMovedWronglyTest) {
 			double overridingValue = distanceFromTargetSquared;
 			if (config.reproduceOnBypassPlayerMovedWronglyTest) {
@@ -99,6 +96,8 @@ public abstract class ServerPlayNetworkHandlerMixin {
 
 	@ModifyVariable(method = "onVehicleMove", index = 28, at = @At(value = "STORE"), slice = @Slice(from = @At(value = "INVOKE", target = "Lnet/minecraft/entity/Entity;getVelocity()Lnet/minecraft/util/math/Vec3d;", ordinal = 0), to = @At(value = "INVOKE", target = "Lnet/minecraft/entity/Entity;move(Lnet/minecraft/entity/MovementType;Lnet/minecraft/util/math/Vec3d;)V", ordinal = 0)))
 	private boolean bypassRevertingPositionOnVehicleMovedWrongly(boolean startingBoundingSpaceNonEmpty) {
+		Logger LOGGER = MtqFixMod.LOGGER;
+		MtqFixModConfig config = MtqFixModConfig.getConfig();
 		if (config.bypassVehiclePositionRevertingLogic) {
 			boolean overridingValue = false;
 			if (config.logOnBypassVehiclePositionRevertingLogic && overridingValue != startingBoundingSpaceNonEmpty) {
@@ -112,6 +111,8 @@ public abstract class ServerPlayNetworkHandlerMixin {
 
 	@ModifyVariable(method = "onPlayerMove", index = 27, at = @At(value = "STORE"), slice = @Slice(from = @At(value = "INVOKE", target = "Lnet/minecraft/server/network/ServerPlayerEntity;getVelocity()Lnet/minecraft/util/math/Vec3d;", ordinal = 0), to = @At(value = "INVOKE", target = "Lnet/minecraft/server/network/ServerPlayerEntity;isSleeping()Z", ordinal = 0)))
 	private double bypassPlayerMovedTooQuicklyTest(double aboutToMoveLengthSquared) {
+		Logger LOGGER = MtqFixMod.LOGGER;
+		MtqFixModConfig config = MtqFixModConfig.getConfig();
 		if (config.bypassPlayerMovedTooQuicklyTest) {
 			double overridingValue = aboutToMoveLengthSquared;
 			if (config.reproduceOnBypassPlayerMovedTooQuicklyTest) {
@@ -150,6 +151,8 @@ public abstract class ServerPlayNetworkHandlerMixin {
 
 	@ModifyVariable(method = "onPlayerMove", index = 27, at = @At(value = "STORE"), slice = @Slice(from = @At(value = "INVOKE", target = "Lnet/minecraft/server/network/ServerPlayerEntity;move(Lnet/minecraft/entity/MovementType;Lnet/minecraft/util/math/Vec3d;)V", ordinal = 0), to = @At(value = "INVOKE", target = "Lnet/minecraft/server/network/ServerPlayerEntity;updatePositionAndAngles(DDDFF)V", ordinal = 1)))
 	private double bypassPlayerMovedWronglyTest(double distanceFromTargetSquared) {
+		Logger LOGGER = MtqFixMod.LOGGER;
+		MtqFixModConfig config = MtqFixModConfig.getConfig();
 		if (config.bypassPlayerMovedWronglyTest) {
 			double overridingValue = distanceFromTargetSquared;
 			if (config.reproduceOnBypassPlayerMovedWronglyTest) {

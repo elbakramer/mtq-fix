@@ -1,3 +1,7 @@
+#### v0.2.1 (2021-10-14)
+
+Put most fields in mixins to inside methods back for maximum mod compatibility.
+
 #### v0.2.0 (2021-10-14)
 
 More precise condition for checking whether the value overriding for bypass is really needed.
